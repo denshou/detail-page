@@ -67,14 +67,14 @@
   border-left: 1px solid #dfdfdd;
   height: 33rem;
   margin-left: 2rem;
-  margin-right: 2rem;
+  margin-right: 3rem;
   padding-left: 2rem;
-  width: 32rem;
+  width: 30.2rem;
 }
 .form-radio-btn {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.1rem;
+  gap: 1.3rem;
 }
 .row {
   display: flex;

@@ -35,7 +35,7 @@ function App() {
             착용감을 제공한다. 적당한 폭과 깊이의 네크라인은 텐션과 복원력을
             갖춘 스판 립 원단을 바디 원단과 밸런스를 맞춰 사용했다. 적당히
             드롭된 어깨선과 여유 있는 릴렉스 핏으로 트렌디한 실루엣을 연출하며
-            두 장을 하나에 구성해 활용도가 높은 제품이다.
+            여섯 장을 하나에 구성해 활용도가 높은 제품이다.
           </p>
           <h2>상세 설명</h2>
           <p>-1 </p>
@@ -46,9 +46,9 @@ function App() {
 
         <div className="buy">
           <div className="title-price">$192</div>
-          <br/>
+          <br />
           <div>★★★★☆ 117reviews</div>
-          <br/>
+          <br />
           <form>
             <div>
               <p>Color</p>
@@ -85,7 +85,7 @@ function App() {
                 </div>
               </div>
             </div>
-              <br/>
+            <br />
             <div>
               <p>Size</p>
               <div className="form-radio-btn">
