@@ -50,8 +50,10 @@ function App() {
         </div>
 
         <div className="buy">
-          <h1>$192</h1>
+          <div className="title-price">$192</div>
+          <br/>
           <div>★★★★☆ 117reviews</div>
+          <br/>
           <form>
             <div>
               <p>Color</p>
@@ -88,7 +90,7 @@ function App() {
                 </div>
               </div>
             </div>
-
+              <br/>
             <div>
               <p>Size</p>
               <div className="form-radio-btn">
