@@ -69,17 +69,18 @@
   margin-left: 2rem;
   margin-right: 2rem;
   padding-left: 2rem;
-  width: 30rem;
+  width: 32rem;
 }
 .form-radio-btn {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.1rem;
 }
 .row {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  width: 26rem;
+  justify-content: space-between;
 }
 .radio-btn {
   width: 5.5rem;
