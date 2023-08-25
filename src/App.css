@@ -1,38 +1,151 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-menu {
+  font-size: 1.3rem;
+  text-align: left;
+  margin-left: 3rem;
+  margin-top: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.img-box {
+  display: flex;
+  width: 100vw;
+  height: 42rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.img-big-box__left {
+  overflow: hidden;
+  border-radius: 1rem;
+  margin: 1rem 1rem 2rem 3rem;
+  height: 42rem;
+}
+.img-big-box__right {
+  overflow: hidden;
+  border-radius: 1rem;
+  margin: 1rem 3rem 2rem 1rem;
+  height: 42rem;
+}
+.img-big {
+  width: 100%;
+  height: 100%;
+}
+.img-sm-box {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 33.3vw;
+  height: 20rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin: 1rem 1rem 2rem 1rem;
+}
+
+.img-sm {
+  width: 100%;
+  height: 100%;
+}
+.item-detail {
+  display: flex;
+  margin-top: 3rem;
+}
+.description {
+  text-align: left;
+  margin-left: 3rem;
+  width: 96rem;
+  height: 33rem;
+}
+.buy {
+  text-align: left;
+  border-left: 1px solid #dfdfdd;
+  width: 52rem;
+  height: 33rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  padding-left: 3rem;
+}
+.radio-btn {
+  width: 12rem;
+  height: 5rem;
+  border: 1px solid #eae7e7;
+  border-radius: 10px;
+  margin: 0.5rem;
+}
+.radio-btn input[type="radio"] {
+  display: none;
+}
+.radio-btn label {
+  display: block;
+  border-radius: 10px;
+  margin: 0 auto;
+  text-align: center;
+  height: 5rem;
+  line-height: 5rem;
+}
+/* checked */
+.radio-btn input[type="radio"]:checked + label {
+  border: 1px solid #184da0;
+}
+/* hover */
+.radio-btn label:hover {
+  color: #666;
+}
+/* :disabled */
+.radio-btn input[type="radio"] + label {
+  background: #f9fafc;
+  color: #666;
+}
+.row {
+  display: flex;
+}
+
+.add-btn {
+  background-color: #5045e4;
+  width: 52rem;
+  height: 4rem;
+  border-radius: 10px;
   color: white;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  border: #5045e3;
 }
 
-.App-link {
-  color: #61dafb;
+.form-color {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.color-radio-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.color-radio-btn input {
+  display: none;
+}
+.color-radio-btn.white label {
+  background-color: white;
+  border: 1px solid gray;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+.color-radio-btn.gray label {
+  background-color: gray;
+  border: 1px solid gray;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+.color-radio-btn.black label {
+  background-color: black;
+  border: 1px solid gray;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.color-radio-btn input[type="radio"]:checked + label {
+  border: 2px solid rgb(61, 61, 61);
 }
