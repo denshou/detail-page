@@ -1,50 +1,36 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { styled } from "styled-components";
+import Nav from "./components/Nav/Nav";
+import Description from "./components/Details/Description";
+import ColorSelect from "./components/ColorSelect/ColorSelect";
+import AddBtn from "./components/Button/AddBtn";
+import SizeSelect from "./components/SizeSelect/SizeSelect";
 
 function App() {
   return (
     <div className="App">
-      <div className="nav-menu">
-        <span>Men</span>
-        <span> | </span>
-        <span>Clothing</span>
-        <span> | </span>
-        <span>Basic Tee 6-Pack</span>
-      </div>
-      <div className="img-box">
-        <div className="img-big-box__left">
-          <img className="img-big" src="insta.jpg" alt="" />
-        </div>
+      <Nav />
+      <ImgBox>
+        <ImgBigLeft>
+          <img className="img-big" src="insta.png" alt="" />
+        </ImgBigLeft>
         <div>
-          <div className="img-sm-box">
+          <ImgSm>
             <img className="img-sm" src="fall.jpg" alt="" />
-          </div>
-          <div className="img-sm-box">
+          </ImgSm>
+          <ImgSm>
             <img className="img-sm" src="lulu.jpg" alt="" />
-          </div>
+          </ImgSm>
         </div>
-        <div className="img-big-box__right">
+        <ImgBigRight>
           <img className="img-big" src="bed.png" alt="" />
-        </div>
-      </div>
-      <div className="item-detail">
-        <div className="description">
-          <h1>Basic Tee 6-Pack</h1>
-          <p>
-            촘촘하게 짜여진 면 100% 코마사 16수 싱글 저지 원단을 사용해 편안한
-            착용감을 제공한다. 적당한 폭과 깊이의 네크라인은 텐션과 복원력을
-            갖춘 스판 립 원단을 바디 원단과 밸런스를 맞춰 사용했다. 적당히
-            드롭된 어깨선과 여유 있는 릴렉스 핏으로 트렌디한 실루엣을 연출하며
-            여섯 장을 하나에 구성해 활용도가 높은 제품이다.
-          </p>
-          <h2>상세 설명</h2>
-          <p>-1 </p>
-          <p>-2 </p>
-          <p>-3 </p>
-          <p>-4</p>
-        </div>
+        </ImgBigRight>
+      </ImgBox>
+      <ItemDetail>
+        <Description />
 
-        <div className="buy">
+        <Buy>
           <div className="title-price">$192</div>
           <br />
           <div>★★★★☆ 117reviews</div>
@@ -52,89 +38,63 @@ function App() {
           <form>
             <div>
               <p>Color</p>
-              <div className="form-color">
-                <div className="color-radio-btn white">
-                  <input
-                    className="color-radio-white"
-                    type="radio"
-                    name="color"
-                    value="white"
-                    id="white"
-                  />
-                  <label htmlFor="white"></label>
-                </div>
-                <div className="color-radio-btn gray">
-                  <input
-                    className="color-radio-gray"
-                    type="radio"
-                    name="color"
-                    value="gray"
-                    id="gray"
-                  />
-                  <label htmlFor="gray"></label>
-                </div>
-                <div className="color-radio-btn black">
-                  <input
-                    className="color-radio-black"
-                    type="radio"
-                    name="color"
-                    value="black"
-                    id="black"
-                  />
-                  <label htmlFor="black"></label>
-                </div>
-              </div>
+              <ColorSelect />
             </div>
             <br />
             <div>
               <p>Size</p>
-              <div className="form-radio-btn">
-                <div className="row">
-                  <div className="radio-btn">
-                    <input type="radio" name="size" value="ssm" id="ssm" />
-                    <label htmlFor="ssm">SSM</label>
-                  </div>
-                  <div className="radio-btn">
-                    <input type="radio" name="size" value="sm" id="sm" />
-                    <label htmlFor="sm">SM</label>
-                  </div>
-                  <div className="radio-btn">
-                    <input type="radio" name="size" value="s" id="s" />
-                    <label htmlFor="s">S</label>
-                  </div>
-                  <div className="radio-btn">
-                    <input type="radio" name="size" value="m" id="m" />
-                    <label htmlFor="m">M</label>
-                  </div>
-                </div>
-
-                <div className="row">
-                  <div className="radio-btn">
-                    <input type="radio" name="size" value="l" id="l" />
-                    <label htmlFor="l">L</label>
-                  </div>
-
-                  <div className="radio-btn">
-                    <input type="radio" name="size" value="xl" id="xl" />
-                    <label htmlFor="xl">XL</label>
-                  </div>
-                  <div className="radio-btn">
-                    <input type="radio" name="size" value="xxl" id="xxl" />
-                    <label htmlFor="xxl">XXL</label>
-                  </div>
-                  <div className="radio-btn">
-                    <input type="radio" name="size" value="xxxl" id="xxxl" />
-                    <label htmlFor="xxxl">XXXL</label>
-                  </div>
-                </div>
-              </div>
+              <SizeSelect />
             </div>
-            <button className="add-btn">Add to bag</button>
+            <AddBtn>Add to bag</AddBtn>
           </form>
-        </div>
-      </div>
+        </Buy>
+      </ItemDetail>
     </div>
   );
 }
 
 export default App;
+
+const ImgBox = styled.div`
+display: flex;
+width: 100vw;
+height: 39rem;
+`
+
+const ImgBigLeft = styled.div`
+  overflow: hidden;
+  border-radius: 1rem;
+  margin: 1rem 1rem 2rem 3rem;
+  height: 37rem;
+  width: 40vw;
+`;
+const ImgBigRight = styled.div`
+  overflow: hidden;
+  border-radius: 1rem;
+  margin: 1rem 3rem 2rem 1rem;
+  height: 37rem;
+  width: 40vw;
+`;
+const ImgSm = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 17.5rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin: 1rem 1rem 2rem 1rem;
+`;
+
+const ItemDetail = styled.div`
+  display: flex;
+  margin-top: 3rem;
+`;
+const Buy = styled.div`
+  text-align: left;
+  border-left: 1px solid #dfdfdd;
+  height: 33rem;
+  margin-left: 2rem;
+  margin-right: 3rem;
+  padding-left: 2rem;
+  width: 30.2rem;
+`;
